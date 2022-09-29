@@ -3,13 +3,13 @@ import { IGraphNode } from "./graphnode";
 export interface IGraphEdge {
   from: IGraphNode;
   to: IGraphNode;
-  weight: number;
+  weight?: number;
 }
 
 export const createGraphEdge = (
   from: IGraphNode,
   to: IGraphNode,
-  weight: number
+  weight?: number
 ): IGraphEdge => {
   return {
     from: from,
@@ -17,3 +17,5 @@ export const createGraphEdge = (
     weight: weight,
   };
 };
+
+
